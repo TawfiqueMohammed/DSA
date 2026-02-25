@@ -21,9 +21,12 @@ int main(){
     int arr[]={1,2,3,4,5};
 
     int size = sizeof(arr)/sizeof(arr[0]);
+    // sum of the elements of the array arr;
     cout<<sumOfElements(arr, size)<<endl;
 
+    // doubling the value of the Array arr;
     doubleTheValue(arr, size);
+
     for(int i = 0; i<size; i++){
         cout<<arr[i]<<" ";
     }
