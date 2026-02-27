@@ -4,7 +4,7 @@ using namespace std;
 
 void Print(char *b){
     for(int i=0; i<=sizeof(b); i++){
-        cout<<b[i];
+        cout<<*(b+i);  // it can also be written as b[i];
     }
     cout<<endl;
 }
