@@ -10,5 +10,6 @@ int main(){
     cout<<*A<<" "<<A[0]<<" "<<&A[0][0]<<endl;
     cout<<A+1<<" "<<&A[1]<<endl;
     cout<<*(A+1)<<endl;
+    cout<<*(*(A+1))<<endl;
 
 }
