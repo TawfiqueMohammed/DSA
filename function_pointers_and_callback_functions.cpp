@@ -8,8 +8,8 @@ void sum(int a, int b){
 void sub(int a, int b){
     cout << a - b << endl;
 }
-// callback function 
 
+// callback function 
 void display(void (*ptr)(int, int)){
     ptr(7,3);
 }
