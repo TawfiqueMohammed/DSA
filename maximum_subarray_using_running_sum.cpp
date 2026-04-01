@@ -16,8 +16,11 @@ int main()
             {
                 maxSum = currentSum;
             }
+            
+            cout<<"Sub array from index " << start << " to " << "index " << end << " has sum: "<< currentSum << endl;
+
         }
     }
 
-    cout << maxSum << endl;
+    cout << "So the Maximum Sum of the sub array is: " << maxSum << endl;
 }
