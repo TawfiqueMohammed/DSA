@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    int A[]={1,2,3,4,5};
+    int A[]={1,-2,3,4,5};
     int n = sizeof(A)/sizeof(A[0]);
     
     int maxSum = INT_MIN;
