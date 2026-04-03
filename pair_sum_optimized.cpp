@@ -2,27 +2,33 @@
 using namespace std;
 
 vector <int> pairSum(vector <int> v, int target, int size){
-    vector <int> newVec;
+    int i = 0, j = size - 1;
+    vector <int> ans;
+    while(i<j){
+        if((v[i] + v[j]) > target){
+            j--;
+        }
 
-    for(int i = 0; i < size; i++){
-        for(int j = i+1; j < size; j++){
-            if(v[i]+v[j] == target){
-                newVec.push_back(i);
-                newVec.push_back(j);
-                return newVec;
-            }
-            
+        else if((v[i]+v[j]) < target){
+            i++;
+        }
+
+        else {
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
         }
     }
-    return newVec;
+    return ans;
 }
 
 int main(){
-    vector <int> v = {1,4,3,3,5,1};
+    vector <int> v = {2,3,5,12,52};
     int size = v.size();
-    int target = 8;
+    int target = 64;
 
-    vector <int> ans = pairSum(v, target, size);
+    vector <int> res = pairSum(v, target, size);
 
-    cout << ans[0] << " " << ans[1];
+    cout << res[0] << " " << res[1];
+
 }
