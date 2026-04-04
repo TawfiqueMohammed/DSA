@@ -15,7 +15,21 @@ int moores_voting(vector <int> v, int size){
             freq--;
         }
     }
-    return ans;
+
+    int count = 0;
+    for(int i = 0; i < size; i++){
+        if(ans == v[i]){
+            count++;
+        }
+    }
+
+    if(count > (size/2)){
+        return ans;
+    }
+    else{
+        return -1;
+    }
+
 }
 
 int main(){
