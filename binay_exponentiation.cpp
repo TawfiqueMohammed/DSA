@@ -1,0 +1,36 @@
+    #include<bits/stdc++.h>
+    using namespace std;
+
+    int binaryExponentiation(double x, int n){
+
+        long long binForm = n;
+
+        if(n == 0) return 1.0;
+        if(x == 0) return 0.0;
+        if(x == 1) return 1.0;
+        if(x == -1 && n % 2 == 0) return 1.0;
+        if(x == -1 && n % 2 != 0) return -1.0;
+
+
+        if(binForm < 0) {
+            x = 1/x;
+            binForm = -binForm;
+        }
+
+        double newAns = 1;
+
+
+        while(binForm > 0){
+            if(binForm % 2 == 1){
+                newAns = newAns * x;
+            }
+            x = x * x;
+            binForm = binForm / 2;
+        }
+        return newAns;
+    }
+    int main(){
+        double x = 3;
+        int n = 5;
+        cout << binaryExponentiation(x, n);
+    }
