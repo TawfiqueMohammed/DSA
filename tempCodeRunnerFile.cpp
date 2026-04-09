@@ -1,3 +1,2 @@
-for(int i = 0; i < n; i++){
-        B[i] = product;
-    }
+    vector<int> prefix(n,1);
+    vector<int> suffix(n,1);
