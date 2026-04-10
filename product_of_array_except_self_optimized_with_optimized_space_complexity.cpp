@@ -5,9 +5,7 @@ int main(){
     vector<int> nums = {1,2,3,4};
     int n = nums.size();
     vector<int> ans(n,1);
-    // vector<int> suffix(n,1);
 
-    // int prefix = 1;
     for(int i = 1; i < n; i++){
         ans[i] = ans[i-1] * nums[i-1];
     }
