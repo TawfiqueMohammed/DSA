@@ -1,26 +1,2 @@
-#include<bits/stdc++.h>
-using namespace std;
-
-int peakIndex(vector<int> nums, int start, int end){
-    while(start <= end){
-        int mid = start + (end - start) / 2;
-        if(nums[mid] > nums[mid - 1] && nums[mid] > nums[mid + 1]){
-            return mid;
-        }
-        // here we should realize where mid is placed; if it's placed in increasing order line which means
-        // nums[mid] > nums[mid-1];
-        // then we should check for the peak in the right side of the mid
-        if(nums[mid] > nums[mid - 1]){
-            start = mid + 1; 
-        }
-        // if peak is not in the right side; peak must be on the left side
-        else end = mid - 1;
-    }
-}
-
-int main(){
-    vector<int> nums = {1,2,3,4,5,3,2,1};
-    int start = 1;
-    int end = nums.size() - 2;
-    cout << peakIndex(nums, start, end) << endl;
-}
+if(mid == 0 && nums[mid] != nums[mid+1]) return nums[mid];
+        if(mid == n-1 && nums[mid] != nums[n-2]) return nums[mid];
