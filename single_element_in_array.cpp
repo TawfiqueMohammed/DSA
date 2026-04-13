@@ -24,7 +24,7 @@ int singleElementInArray(vector<int> nums, int n){
                 start = mid + 1;
             }
         }
-        
+
         else{
             if(nums[mid] == nums[mid-1]){
                 start = mid + 1;
@@ -39,7 +39,7 @@ int singleElementInArray(vector<int> nums, int n){
 }
 
 int main(){
-    vector<int> nums = {1,1,2,2,3,3,4,4,8};
+    vector<int> nums = {1, 2, 2, 3, 3};
     int n = nums.size();
     
     cout << singleElementInArray(nums, n)<<endl;
