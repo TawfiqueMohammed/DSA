@@ -45,7 +45,7 @@ int bookAllocation(vector<int> A, int n, int m){
 int main(){
     vector<int> A = {12, 34, 67, 90};
     int n = A.size();
-    int m = 2;
+    int m = 2; // no of students
 
     cout << bookAllocation(A, n, m);
 

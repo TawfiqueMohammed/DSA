@@ -10,17 +10,17 @@ int singleElementInArray(vector<int> nums, int n){
     while(start <= end){
         int mid = start + (end - start) / 2;
 
-        if(mid == 0 && nums[mid] != nums[mid+1]) return nums[mid];
-        if(mid == n-1 && nums[mid] != nums[n-2]) return nums[mid];
+        if(mid == 0 && nums[mid] != nums[mid+1]) return nums[mid]; // corner case: to examine if the first index of mid is single element
+        if(mid == n-1 && nums[mid] != nums[n-2]) return nums[mid]; // corner case: to examine if the last index of mid is single element
 
         if(nums[mid] != nums[mid-1] && nums[mid] != nums[mid+1]){
             return nums[mid];
         }
-        if(mid%2 == 0){
-            if(nums[mid] == nums[mid-1]){
+        if(mid%2 == 0){ // tests that two sides of mid has even number of elements
+            if(nums[mid] == nums[mid-1]){ // if the mid element is equals to its 
                 end = mid - 1;
             }
-            else {
+            else { // if the two sides of mid has odd number of elements
                 start = mid + 1;
             }
         }

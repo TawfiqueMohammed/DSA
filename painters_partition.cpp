@@ -4,7 +4,7 @@ using namespace std;
 bool isPossible(vector<int>boards, int k, int n, int mid){
     int painter = 1, time = 0;
     for(int i = 0; i < n; i++){
-        if(time + boards[i] <= mid){
+        if(time + boards[i] <= mid){ // i had to recheck this 
             time += boards[i];
         }
         else{
@@ -20,13 +20,13 @@ bool isPossible(vector<int>boards, int k, int n, int mid){
 int painter_partition(vector<int>boards, int k){
     int n = boards.size();
     if(k > n) return -1;
-    int maxVal = INT_MIN, sum = 0;
+    int maxVal = INT_MIN, sum = 0; // I had to rechek the max value thing whole
     for(int i = 0; i < n; i++){
         sum += boards[i];
         maxVal = max(maxVal, boards[i]);
     }
     
-    int start = maxVal;
+    int start = maxVal; // I had to recheck this
     int end = sum;
     int ans = -1;
     while(start <= end){
@@ -39,7 +39,7 @@ int painter_partition(vector<int>boards, int k){
             start = mid + 1;
         }
     }
-    return ans;
+    return ans; // I had to recheck this
 }
 
 int main() {
