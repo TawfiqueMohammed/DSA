@@ -1,2 +1,9 @@
-if(mid == 0 && nums[mid] != nums[mid+1]) return nums[mid];
-        if(mid == n-1 && nums[mid] != nums[n-2]) return nums[mid];
+ // for(int i = n-1; i > pivot; i--){
+    //     if(A[i] > A[pivot]){
+    //         swap(A[i], A[pivot]);
+    //         break;
+    //     }
+    // }
+    
+
+    // reverse(A.begin() + pivot+1, A.end());

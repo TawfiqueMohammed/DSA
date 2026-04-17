@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int mergeTwoSortedArray(vector<int> &A, vector<int> B, int idx, int m, int n){
+int mergeTwoSortedArray(vector<int> &A, vector<int> B, int idx, int m, int n){ // past mistake: I forgot to use &. As we are passing data by reference.
     
     int i=m-1, j=n-1;
     while(i>=0 && j>=0){
@@ -14,11 +14,11 @@ int mergeTwoSortedArray(vector<int> &A, vector<int> B, int idx, int m, int n){
         }
     }
 
-    while(j>=0){
+    while(j>=0){  // past mistake: i forgot to use this loop. this loop is to check if elements of B is still there
         A[idx] = B[j];
         idx--, j--;
     }
-}
+} 
 
 int main(){
     vector<int> A = {1,2,3};
