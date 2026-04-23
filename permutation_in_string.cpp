@@ -20,7 +20,8 @@ bool checkInclusion(string &s1, string &s2){
 
     for(int i = 0; i < s2.length(); i++){
         int windowIdx = 0, idx = i;         // here windowIdx is the index of window and idx is the index of the characters of the s2 string
-        int windowFreq[26] = {0};
+        int windowFreq[26] = {0};           // this is initialization is done here inside the loop because we just want the window frequency
+                                            // if we did it outside the loop our proper window frequency would not be calculated properly
         while(windowIdx < windowSize && idx < s2.length()){
             windowFreq[s2[idx] - 'a']++;
             windowIdx++; idx++;
