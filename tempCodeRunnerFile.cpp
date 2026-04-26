@@ -1,1 +1,1 @@
-        int windowFreq[26] = {0};
+        // cout << endl;
