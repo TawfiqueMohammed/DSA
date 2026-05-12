@@ -26,7 +26,7 @@ bool search2dOnlyRowColSorted(vector<vector<int>> &mat, int tar){
 }
 
 int main(){
-    // একটি সঠিকভাবে Row-Column সর্টেড ম্যাট্রিক্স
+    // Row-Column সর্টেড ম্যাট্রিক্স
     vector<vector<int>> mat = {
         {10, 20, 30, 40},
         {15, 25, 35, 45},
