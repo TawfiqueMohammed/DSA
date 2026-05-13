@@ -11,7 +11,7 @@ bool search2dOnlyRowColSorted(vector<vector<int>> &mat, int tar){
     int r = 0; 
     int c = cols - 1;
 
-    while(r < rows && c >= 0){ // বাউন্ডারি চেক
+    while(r < rows && c >= 0){ // বাউন্ডারি চেক -- inside this loop c is decreasing and r is increasing
         if(mat[r][c] == tar){
             cout << "Found at row: " << r << ", col: " << c << endl;
             return true;

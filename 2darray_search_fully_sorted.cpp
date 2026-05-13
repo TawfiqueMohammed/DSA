@@ -28,7 +28,7 @@ bool midRowSearching(vector<vector<int>> &mat, int target, int midRow)
     return false;
 }
 
-int searchFullySorted2dMatrix(vector<vector<int>> &mat, int m, int n, int target)
+bool searchFullySorted2dMatrix(vector<vector<int>> &mat, int m, int n, int target)
 {
     int startRow = 0, endRow = m - 1;
     while (startRow <= endRow)
@@ -48,7 +48,7 @@ int searchFullySorted2dMatrix(vector<vector<int>> &mat, int m, int n, int target
             startRow = midRow + 1;
         }
     }
-    return false;
+    return false;  // here was mistake
 }
 
 int main()
@@ -60,7 +60,7 @@ int main()
         {90, 92, 98, 100}};
 
     int m = mat.size();
-    int n = mat[0].size();
+    int n = mat[0].size(); // here was mistake 
 
     int target = 67;
 
