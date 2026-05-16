@@ -2,7 +2,7 @@
 using namespace std;
 
 vector <int> pairSum(vector <int> v, int target, int size){
-    int i = 0, j = size - 1;
+    int i = 0, j = size - 1; // i is the index of first element and j is the index of last element
     vector <int> ans;
     while(i<j){
         if((v[i] + v[j]) > target){
