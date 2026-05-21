@@ -12,7 +12,7 @@ vector<int> findRepeatingAndMissing(vector<vector<int>> & grid, int n){
             actualSum += grid[i][j];
             if(us.find(grid[i][j]) != us.end()){
                 a = grid[i][j];
-                v.push_back(grid[i][j]);
+                v.push_back(a); 
             }
             us.insert(grid[i][j]);
         }
