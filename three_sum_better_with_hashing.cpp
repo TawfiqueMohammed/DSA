@@ -19,7 +19,7 @@ int main(){
         }
     }
 
-    vector<vector<int>> ans(uniqueTriplets.begin(), uniqueTriplets.end());
+    vector<vector<int>> ans(uniqueTriplets.begin(), uniqueTriplets.end()); // converting uniqueTriplets(which is set) into vector
 
     for(int i = 0; i < ans.size(); i++) {
         for(int j = 0; j < ans[i].size(); j++) {
