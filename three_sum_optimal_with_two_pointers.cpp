@@ -22,6 +22,7 @@ vector<vector<int>> threeSumOptimal(vector<int> v, int tar){
                 while(j<k && v[j]==v[j-1]){
                     j++;
                 }
+                
             }
         }
     }
@@ -29,11 +30,11 @@ vector<vector<int>> threeSumOptimal(vector<int> v, int tar){
 }
 
 int main(){
-    vector<int> v = {-2,-2,-1,0,-4,3,1,2};
+    vector<int> v = {-2, -2, -2, 0, 0, 2, 2, 2};
     int tar = 0;
     vector<vector<int>> x = threeSumOptimal(v, tar);
     for(int i = 0; i<x.size(); i++){
-        for(int j = 0; j<x[0].size(); j++){
+        for(int j = 0; j<x[i].size(); j++){
             cout << x[i][j] << " ";
         }
         cout<<endl;
